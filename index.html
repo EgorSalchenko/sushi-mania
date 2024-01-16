@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СушиМания</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<!-- Проблемы:
+-импорт картинок из фигмы
+    сохраняются с лишними границами, удалось сохранить нормально только одну картинку в слайдере,
+    2 картинки в news.
+-->
+
+
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href=""><img class="header__logo" src="img/logos/logo.png" alt=""></a>
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span>
+                    </label>  <ul class="menu__box">
+                      <a class="menu__item burger__img-logo" href="#"><img class="burger__img " src="img/logos/logo.png" alt=""></a>
+                      <li><a class="menu__item" href="#">Акции</a></li>
+                      <li><a class="menu__item" href="#">Контакты</a></li>
+                      <li><a class="menu__item" href="#">Для партнеров</a></li>
+                      <li><a class="menu__item burger-svg" href="#"><img class="burger__img " src="img/logos/Inst.svg" alt=""></a></li>
+                      <li><a class="menu__item burger-svg" href="#"><img class="burger__img " src="img/logos/VK.svg" alt=""></a></li>
+                    </ul>
+                  </div>
+
+                <div class="header__left">
+                    
+                    <p class="header__text header__delivery" >Доставка японской <br>
+                        кухни <span class="orange bold">Краснодар</span></p>
+                    <p class="header__text header__free">Бесплатно от 700р</p>
+                    <a href="tel:89883573574" class="header__tel">
+                        <p class="header__text header__tel">8 (988) 357 35 74</p>
+                    </a>
+                </div>
+                <div class="header__right">
+                    <a href="" class="header__link">
+                        <p class="header__text orange">Акции</p>
+                    </a>
+                    <a href="" class="header__link">
+                        <p class="header__text">Контакты</p>
+                    </a>
+                    <a href="" class="header__link">
+                        <p class="header__text header__partners">Для партнеров</p>
+                    </a>
+                    <div class="header__logos">
+                        <a class="header__logo-svg" href=""><img src="img/logos/VK.svg" alt="" class="header__logo-svg"></a>
+                        <a class="header__logo-svg" href=""><img src="img/logos/Inst.svg" alt="" class="header__logo-svg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="menu__inner">
+                <div class="nav">
+                    <div class="nav__inner">
+                        <div class="dropdown">
+                            <button class="dropbtn">Меню <img class="arrow-btn" src="img/logos/svg-arrow.svg" alt=""></button>
+                            <div class="dropdown-content">
+                                <a href="#" class="nav__link active main-nav">Главная</a>
+                                <a href="#sets" class="nav__link sets-nav">Сеты</a>
+                                <a href="#" class="nav__link pizza-nav">Пицца</a>
+                                <a href="#" class="nav__link rolls-nav">Роллы</a>
+                                <a href="#" class="nav__link temperature-nav">Темпура</a>
+                                <a href="#" class="nav__link agedam-nav">Агедам</a>
+                                <a href="#" class="nav__link baked-nav">Запеченные</a>
+                                <a href="#" class="nav__link classic-nav">Классические</a>
+                                <a href="#" class="nav__link sushi-nav">Суши</a>
+                                <a href="#" class="nav__link wok-nav">Wok</a>
+                                <a href="#" class="nav__link snacks-nav">Закуски</a>
+                                <a href="#" class="nav__link drinks-nav">Напитки</a>
+                                <a href="#" class="nav__link add-nav">Доп</a>
+                            </div>
+                        </div>
+                        <div class="nav__links">
+                            <a href="#" class="nav__link active main-nav">Главная</a>
+                            <a href="#sets" class="nav__link sets-nav">Сеты</a>
+                            <a href="#" class="nav__link pizza-nav">Пицца</a>
+                            <a href="#" class="nav__link rolls-nav">Роллы</a>
+                            <a href="#" class="nav__link temperature-nav">Темпура</a>
+                            <a href="#" class="nav__link agedam-nav">Агедам</a>
+                            <a href="#" class="nav__link baked-nav">Запеченные</a>
+                            <a href="#" class="nav__link classic-nav">Классические</a>
+                            <a href="#" class="nav__link sushi-nav">Суши</a>
+                            <a href="#" class="nav__link wok-nav">Wok</a>
+                            <a href="#" class="nav__link snacks-nav">Закуски</a>
+                            <a href="#" class="nav__link drinks-nav">Напитки</a>
+                            <a href="#" class="nav__link add-nav">Доп</a>
+                        </div>
+                        <div class="nav__basket">
+                            <div class="basket__items"><p>3</p></div>
+                            <button class="nav__button">Корзина</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="" class="swiper__link"><img class="swiper-img" src="img/slider/slider-img1.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="" class="swiper__link"><img class="swiper-img" src="img/slider/slider-img2.jpg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="" class="swiper__link"><img class="swiper-img" src="img/slider/slider-img3.jpg" alt=""></a></div>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="news__inner">
+                        <h2 class="news__title">Новинки</h2>
+                        <div class="news__line">
+                            <div class="news__block1">
+                                <a href="#" class="news__link"><img src="img/news/new1.jpg" alt="" class="news__img"></a>
+                                <a href="#" class="news__link"><img src="img/news/new2.jpg" alt="" class="news__img"></a>
+                            </div>
+                            <div class="news__block2">
+                                <a href="#" class="news__link wrap2"><img src="img/news/new1.jpg" alt="" class="news__img"></a>
+                                <a href="#" class="news__link wrap1"><img src="img/news/new2.jpg" alt="" class="news__img"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sets" id="sets">
+                    <h2 class="sets__title">Сеты</h2>
+                    <div class="sets__inner">
+                        
+                        <div class="card__line1">
+                            <div class="card">
+                                <div class="card__inner">
+                                    <img src="img/sets/set1.jpg" alt="" class="card__img">
+                                    <div class="card__text-container">
+                                        <div class="card__title-text">
+                                            <p class="card__name">Сет XXL</p>
+                                            <p class="card__amount">96шт/2600гр</p>
+                                        </div>
+                                        <p class="card__compound">Запеченный краб, Чиккен запеченный, Кунсей...</p>
+                                        <div class="card__end">
+                                            <p class="card__cost">2 390р</p>
+                                            <p class="card__stock"><s>2 390р</s></p>
+                                            <button class="nav__button btn-small">Корзина</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__inner">
+                                    <div class="new">new</div>
+                                    <img src="img/sets/set2.jpg" alt="" class="card__img">
+                                    <div class="card__text-container">
+                                        <div class="card__title-text">
+                                            <p class="card__name">Сет Бум</p>
+                                            <p class="card__amount">56шт/1500гр</p>
+                                        </div>
+                                        <p class="card__compound">Филадельфия, Онигара, Мистер, Банзай, Кани Маки...</p>
+                                        <div class="card__end card__end-boom">
+                                            <p class="card__cost">1 650р
+                                                </p>
+                                            <p class="card__stock"><s></s></p>
+                                            <button class="nav__button btn-small">Корзина</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__inner">
+                                    <img src="img/sets/set3.jpg" alt="" class="card__img">
+                                    <div class="card__text-container">
+                                        <div class="card__title-text">
+                                            <p class="card__name">Сет Запеканка</p>
+                                            <p class="card__amount">24шт/780гр</p>
+                                        </div>
+                                        <p class="card__compound">Кунсей запеченный, Чикен запеченый, Евразия</p>
+                                        <div class="card__end">
+                                            <div class="card__casserole">
+                                                <p class="card__cost">710р</p>
+                                                <p class="card__stock"><s>900р</s></p>
+                                            </div>
+                                            <button class="nav__button btn-small">Корзина</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__inner">
+                                    <div class="new">new</div>
+                                    <div class="hot">hot</div>
+                                    <img src="img/sets/set4.jpg" alt="" class="card__img">
+                                    <div class="card__text-container">
+                                        <div class="card__title-text">
+                                            <p class="card__name">Спайси Сет</p>
+                                            <p class="card__amount">27шт/500гр</p>
+                                        </div>
+                                        <p class="card__compound">Спайси лосось, Спайси угорь, Спайси креветка ролл...</p>
+                                        <div class="card__end">
+                                            <div class="card__casserole">
+                                                <p class="card__cost">575р</p>
+                                                <p class="card__stock"><s>700р</s></p>
+                                            </div>
+                                            <button class="nav__button btn-small">Корзина</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__line2">
+                            <div class="card">
+                                <div class="card__inner">
+                                    <div class="new">new</div>
+                                    <img src="img/sets/set1.jpg" alt="" class="card__img">
+                                    <div class="card__text-container">
+                                        <div class="card__title-text">
+                                            <p class="card__name">Сет XXL</p>
+                                            <p class="card__amount">96шт/2600гр</p>
+                                        </div>
+                                        <p class="card__compound">Запеченный краб, Чиккен запеченный, Кунсей...</p>
+                                        <div class="card__end">
+                                            <p class="card__cost">2 390р</p>
+                                            <p class="card__stock"><s>2 390р</s></p>
+                                            <button class="nav__button btn-small">Корзина</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__inner">
+                                    <div class="new">new</div>
+                                    <img src="img/sets/set1.jpg" alt="" class="card__img">
+                                    <div class="card__text-container">
+                                        <div class="card__title-text">
+                                            <p class="card__name">Сет XXL</p>
+                                            <p class="card__amount">96шт/2600гр</p>
+                                        </div>
+                                        <p class="card__compound">Запеченный краб, Чиккен запеченный, Кунсей...</p>
+                                        <div class="card__end">
+                                            <p class="card__cost">2 390р</p>
+                                            <p class="card__stock"><s>2 390р</s></p>
+                                            <button class="nav__button btn-small">Корзина</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__inner">
+                                    <div class="new">new</div>
+                                    <img src="img/sets/set1.jpg" alt="" class="card__img">
+                                    <div class="card__text-container">
+                                        <div class="card__title-text">
+                                            <p class="card__name">Сет XXL</p>
+                                            <p class="card__amount">96шт/2600гр</p>
+                                        </div>
+                                        <p class="card__compound">Запеченный краб, Чиккен запеченный, Кунсей...</p>
+                                        <div class="card__end">
+                                            <p class="card__cost">2 390р</p>
+                                            <p class="card__stock"><s>2 390р</s></p>
+                                            <button class="nav__button btn-small">Корзина</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__inner">
+                                    <div class="new">new</div>
+                                    <img src="img/sets/set1.jpg" alt="" class="card__img">
+                                    <div class="card__text-container">
+                                        <div class="card__title-text">
+                                            <p class="card__name">Сет XXL</p>
+                                            <p class="card__amount">96шт/2600гр</p>
+                                        </div>
+                                        <p class="card__compound">Запеченный краб, Чиккен запеченный, Кунсей...</p>
+                                        <div class="card__end">
+                                            <p class="card__cost">2 390р</p>
+                                            <p class="card__stock"><s>2 390р</s></p>
+                                            <button class="nav__button btn-small">Корзина</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script/main.js"></script>
+</body>
+</html>
